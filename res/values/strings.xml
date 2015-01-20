@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Office Detective</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="details">DETAILS</string>
+    <string name="solved">Solved ?</string>
+    <string name="title">TITRE</string>
+    <string name="crime">Crimes</string>
+    <string name="title_activity_crime_list">CrimeListActivity</string>
+
+</resources>
