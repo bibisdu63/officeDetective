@@ -7,8 +7,11 @@ public class CrimeLab {
 	
 	static private CrimeLab c = null;
 	static public CrimeLab getInstance(){
-		if(c==null)
+		if(c==null){
 			c=new CrimeLab();
+			c.initListe();
+		}
+			
 		return c;
 	}
 	
@@ -29,7 +32,7 @@ public class CrimeLab {
 	
 	public void initListe(){
 		for (int i = 0 ; i< 100 ; i ++)
-			c.listeDeCrimes.add(new Crime("crime "+ i,new Date(),false));
+			c.listeDeCrimes.add(new Crime("crime "+ i,new Date(),true));
 	}
 	
 }

@@ -27,9 +27,10 @@ public class CrimeFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_crime,container,false);
+		Bundle bextra = getActivity().getIntent().getExtras();
 		EditText editText = (EditText) view.findViewById(R.id.titre);
 		
-		editText.setText(crime.getTitre());
+		editText.setText(bextra.getString("titre"));
 
 		
 		editText.addTextChangedListener(new TextWatcher() {
@@ -53,7 +54,7 @@ public class CrimeFragment extends Fragment {
 			}
 		});
 		Button b = (Button) view.findViewById(R.id.button1);
-		b.setText(crime.getDateCrime().toString());
+		b.setText(bextra.getString("date"));
 		
 		final CheckBox cb = (CheckBox)view.findViewById(R.id.checkBox1);
 		cb.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -65,7 +66,7 @@ public class CrimeFragment extends Fragment {
 				
 			}
 		});
-		cb.setChecked(crime.getResolu());
+		cb.setChecked(bextra.getBoolean("resolu"));
 		
 		return view;
 	}
